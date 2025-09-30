@@ -11,11 +11,11 @@ st.set_page_config(
 )
 
 # # --- API Configuration ---
-API_BASE_URL = "http://127.0.0.1:8000"
+#API_BASE_URL = "http://127.0.0.1:8000"
 
 
 # To this placeholder (we will get the real URL after deploying the API):
-#API_BASE_URL = "https://retail-api-gajalakshmi.onrender.com/" 
+API_BASE_URL = "https://retail-api-gajalakshmi-snm7.onrender.com" 
 
 
 # --- Helper Functions ---
@@ -182,3 +182,4 @@ elif page == "Category & Payment Insights":
     category_insights_page()
 elif page == "Campaign Simulation":
     campaign_simulation_page()
+

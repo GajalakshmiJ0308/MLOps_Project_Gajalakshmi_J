@@ -20,4 +20,6 @@ This project provides an end-to-end analytics pipeline and web application to an
 ## Project Structure
 
 API Link-[https://retail-api-gajalakshmi-snm7.onrender.com]
+
 Dashboard Link-[https://retail-sales-dashboard-gajalakshmi.streamlit.app]
+

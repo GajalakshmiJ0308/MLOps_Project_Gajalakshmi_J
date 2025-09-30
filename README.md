@@ -16,4 +16,8 @@ This project provides an end-to-end analytics pipeline and web application to an
 - **Interactive Dashboard**: A multi-page Streamlit dashboard for visualizing all insights.
 - **Containerized**: Includes a `Dockerfile` for easy deployment.
 
+
 ## Project Structure
+
+API Link-[https://retail-api-gajalakshmi-snm7.onrender.com]
+Dashboard Link-[https://retail-sales-dashboard-gajalakshmi.streamlit.app]

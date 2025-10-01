@@ -13,7 +13,7 @@ st.set_page_config(
     page_icon="💡"
 )
 # Use the Render URL from your deployment
-API_BASE_URL = "https://retail-api-gajalakshmi-snm7.onrender.com" # Replace if you deploy a new one
+API_BASE_URL = "https://retail-insights-api-gajalakshmi-j.onrender.com" # Replace if you deploy a new one
 
 # --- Helper Function ---
 @st.cache_data(ttl=600) # Cache data for 10 minutes
@@ -155,3 +155,4 @@ with tab4:
                 kpi3.metric("Projected ROI", sim_results['projected_roi_percent'])
                 
                 st.success(f"A campaign targeting Cluster {target_cluster} with a {discount_pct}% discount is projected to yield an ROI of **{sim_results['projected_roi_percent']}**.")
+

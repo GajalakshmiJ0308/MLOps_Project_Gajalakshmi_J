@@ -5,7 +5,7 @@ from pathlib import Path
 from src.analytics_engine import AnalyticsEngine
 
 app = FastAPI(
-    title="Retail Insights API (Restructured)",
+    title="Retail Insights API",
     description="An API for retail analytics powered by an AnalyticsEngine and K-Means clustering."
 )
 
@@ -16,7 +16,7 @@ engine = AnalyticsEngine(str(DATA_FILE_PATH))
 # Root endpoint
 @app.get("/")
 def read_root():
-    return {"message": "Welcome to the Restructured Retail Insights API"}
+    return {"message": "Welcome to the Retail Insights API. To access the API Main Page, include '/docs' at the end of the url."}
 
 # Endpoints
 @app.get("/performance/stores")
@@ -60,3 +60,4 @@ def run_campaign_simulation(target_cluster: int, discount: float = 0.1):
     if engine.rfm_df_clustered.empty:
         raise HTTPException(status_code=404, detail="Data not available.")
     return engine.run_campaign_simulation(target_cluster, discount)
+

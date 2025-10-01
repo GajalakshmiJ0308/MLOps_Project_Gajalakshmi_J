@@ -15,7 +15,7 @@ st.set_page_config(
 )
 
 # --- API Configuration ---
-API_BASE_URL = "http://127.0.0.1:8000"
+API_BASE_URL = "https://retail-insights-api-gajalakshmi-j.onrender.com"
 
 # --- Helper Function to Fetch Data ---
 @st.cache_data(ttl=300)
@@ -177,4 +177,5 @@ elif page == "Campaign Simulator":
                 kpi2.metric("Projected Campaign Cost", f"${sim_results['campaign_cost']:,.2f}")
                 kpi3.metric("Projected ROI", f"{sim_results['projected_roi_percent']:,.2f}%")
                 
+
                 st.success(f"**Conclusion:** Targeting the '{target_segment}' segment with a {discount}% discount is projected to yield a significant return on investment.")

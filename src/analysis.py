@@ -5,7 +5,6 @@ import numpy as np
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
 
-# --- Case Scenario Functions ---
 
 # 1. Store Performance
 def calculate_store_performance(df: pd.DataFrame) -> pd.DataFrame:
@@ -75,7 +74,6 @@ def perform_rfm_kmeans_segmentation(df: pd.DataFrame, n_clusters: int = 4) -> pd
     rfm['segment'] = rfm['cluster'].map(segment_map)
     return rfm.reset_index()
 
-# --- NEW FUNCTIONS FOR SCENARIOS 8, 9, 10 ---
 
 # 8. Repeat Customer vs. One-time
 def analyze_repeat_vs_onetime_customers(df: pd.DataFrame) -> pd.DataFrame:
@@ -126,4 +124,5 @@ def run_campaign_simulation(rfm_df: pd.DataFrame, target_segment: str, discount_
         "projected_revenue": projected_revenue,
         "campaign_cost": campaign_cost,
         "projected_roi_percent": roi
+
     }

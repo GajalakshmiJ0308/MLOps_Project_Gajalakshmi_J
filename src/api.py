@@ -6,7 +6,7 @@ from pathlib import Path
 from src import analysis
 
 app = FastAPI(
-    title="Retail Insights API (Simplified)",
+    title="Retail Insights API",
     description="A straightforward API for retail analytics."
 )
 
@@ -80,4 +80,5 @@ def get_category_by_segment():
 @app.get("/simulations/campaign")
 def simulate_campaign(target_segment: str, discount_pct: float = 0.10):
     if rfm_df.empty: return {"error": "Data not loaded."}
+
     return analysis.run_campaign_simulation(rfm_df, target_segment, discount_pct)
